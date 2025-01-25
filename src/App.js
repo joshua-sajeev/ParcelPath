@@ -44,15 +44,15 @@ const generatePDF = async () => {
   for (let i = 0; i < toAddressesArray.length; i++) {
     const [x, y] = positions[pairCount % 4];
 
-    // Draw "From" address with bold text and font size 13
-    page.drawText("From:", { x, y, size: 13, color: rgb(0, 0, 0), font: await pdfDoc.embedFont('Helvetica-Bold') });
-    fromAddress.split("\n").forEach((line, idx) => {
+    // Draw "To" address with bold text and font size 13
+    page.drawText("To:", { x, y, size: 13, color: rgb(0, 0, 0), font: await pdfDoc.embedFont('Helvetica-Bold') });
+    toAddressesArray[i].split("\n").forEach((line, idx) => {
       page.drawText(line, { x, y: y - 15 * (idx + 1), size: 10 });
     });
 
-    // Draw "To" address with bold text and font size 13
-    page.drawText("To:", { x, y: y - 100, size: 13, color: rgb(0, 0, 0), font: await pdfDoc.embedFont('Helvetica-Bold') });
-    toAddressesArray[i].split("\n").forEach((line, idx) => {
+    // Draw "From" address with bold text and font size 13
+    page.drawText("From:", { x, y: y - 100, size: 13, color: rgb(0, 0, 0), font: await pdfDoc.embedFont('Helvetica-Bold') });
+    fromAddress.split("\n").forEach((line, idx) => {
       page.drawText(line, { x, y: y - 115 - 15 * idx, size: 10 });
     });
 
