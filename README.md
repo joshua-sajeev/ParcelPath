@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Address PDF Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React application for generating a PDF document with "From" and "To" addresses formatted in pairs. The app allows users to:
 
-## Available Scripts
+1. Enter a "From Address."
+2. Enter multiple "To Addresses," each separated by a blank line.
+3. Generate a PDF file with these addresses formatted into pairs on an A4-sized page.
+4. Copy a helpful message to the clipboard for correctly formatting the addresses.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **From Address Input**: Enter the sender's address, which will be included in the PDF.
+- **To Addresses Input**: Enter multiple recipient addresses, separated by a blank line for each address.
+- **PDF Generation**: Automatically formats the addresses into pairs on each page (up to 4 pairs per page).
+- **Clipboard Copy**: A button to copy a helpful message for address formatting.
+- **Responsive Design**: User-friendly interface built with Material-UI.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to Use
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Enter the "From Address" in the first text field.
+2. Enter the "To Addresses" in the second text field. Ensure each address is separated by a blank line.
+3. Click the "Generate PDF" button. A PDF file containing the addresses will be created and downloaded automatically.
+4. (Optional) Click the "Copy Text to Clipboard" button to copy instructions for formatting addresses.
 
-### `npm test`
+## Example Input for "To Addresses"
+```
+John Doe
+123 Main Street
+Springfield, IL 62701
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Jane Smith
+456 Elm Street
+Greenfield, CA 93927
+```
